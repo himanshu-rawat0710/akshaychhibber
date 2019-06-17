@@ -1,0 +1,204 @@
+.body-up {
+	height: auto;
+	width: auto;
+	display: grid;
+	grid-template-rows: 300px 1fr;
+}
+
+.body-up img {
+	place-self: center;
+}
+
+.divider-body {
+	width: 30vw;
+	min-width: 60px;
+	height: 1px;
+	border-bottom: 1px dashed rgba(150, 150, 150, 1);
+	margin: 50px auto;
+}
+
+.up-body-content h1 {
+	text-align: center;
+	font-size: 2em;
+	margin: 0 0 10px 0;
+}
+
+.up-body-content p {
+	font-size: 1.5em;
+	min-width: 250px;
+	margin: 0 auto;
+	width: 60%;
+	text-align: center;
+}
+
+.body-mid, .body-low {
+	display: grid;
+	width: auto;
+	height: auto;
+	grid-template-rows: 1fr 1fr;
+}
+
+.body-mid h1, .body-low h1 {
+	font-size: 200%;
+	place-self: center;
+	text-align: center;
+}
+
+.animation-display {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.animation-display {
+	width: 40%;
+	min-width: 450px;
+	place-self: center;
+}
+
+.bg-logo-like {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background-image: url(../res/likes.png);
+	animation-name: scroll-down-image;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: cubic-bezier(1, 0, 0, 1);
+}
+
+.bg-logo-do {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background-image: url(../res/dos.png);
+	animation-name: scroll-down-dos;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: cubic-bezier(1, 0, 0, 1);
+}
+
+.content {
+	width: 275px;
+	height: 40px;
+	overflow: hidden;
+}
+
+.content h2 {
+	animation-name: scroll-down-text;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: cubic-bezier(1, 0, 0, 1);
+}
+
+.contact {
+	width: auto;
+	height: auto;
+	text-align: center;
+}
+
+.contact button {
+	margin: 40px auto;
+	border: 2px solid #0B0B0B;
+	border-radius: 5px;
+	padding: 15px;
+	font-size: 110%;
+	color: #000000;
+	background: #9A9A9A;
+	cursor: pointer;
+	transition: linear 0.2s;
+}
+
+.contact button:hover {
+	background: #FBFBFB;
+}
+
+@keyframes scroll-down-image {
+	0% {
+		background-position: 0 0px;
+	}
+
+	20% {
+		background-position: 0 73px;
+	}
+
+	40% {
+		background-position: 0 143px;
+	}
+
+	60% {
+		background-position: 0 223px;
+	}
+
+	80% {
+		background-position: 0 300px;
+	}
+
+	100% {
+		background-position: 0 300px;
+	}
+}
+
+@keyframes scroll-down-dos {
+	0% {
+		background-position: 0 -3px;
+	}
+
+	20% {
+		background-position: 0 82px;
+	}
+
+	40% {
+		background-position: 0 152px;
+	}
+
+	60% {
+		background-position: 0 225px;
+	}
+
+	80% {
+		background-position: 0 297px;
+	}
+
+	100% {
+		background-position: 0 297px;
+	}
+}
+
+@keyframes scroll-down-text {
+	0% {
+		transform: translateY(0);
+	}
+
+	20% {
+		transform: translateY(-36px);
+	}
+
+	40% {
+		transform: translateY(-72px);
+	}
+
+	60% {
+		transform: translateY(-108px);
+	}
+
+	80% {
+		transform: translateY(-144px);
+	}
+
+	100% {
+		transform: translateY(-144px);
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	.animation-display {
+		height: 150px;
+		display: flex;
+		min-width: 50px;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		text-align: center;
+	}
+}

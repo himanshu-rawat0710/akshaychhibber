@@ -1,0 +1,56 @@
+.skill-body {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: rgba(20, 20, 20, 0.9);
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s ease-out;
+}
+
+.skills-wrapper {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	height: 90%;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+}
+
+.skills-wrapper div {
+	width: 20%;
+	height: 20%;
+	border-radius: 5px;
+	max-width: 150px;
+	max-height: 150px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 15px;
+	margin-bottom: 15px;
+	transition: transform 0.2s ease-out;
+}
+
+.skills-wrapper img {
+	width: 80%;
+	height: 80%;
+	max-height: 100px;
+	max-width: 100px;
+}
+
+.skills-wrapper div:hover {
+	transform: scale(1.1);
+}
+
+.skills-wrapper div:nth-child(odd) {
+	background: rgb(128, 128, 128);
+}
+
+.skills-wrapper div:nth-child(even) {
+	background: rgb(70, 70, 70);
+}
+
